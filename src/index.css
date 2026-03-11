@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+  /* Neon Purple Theme Palette */
+  --color-neon-purple: #A020F0;
+  --color-neon-purple-deep: #7010B0;
+  --color-brand-white: #FFFFFF;
+  --color-brand-black: #000000;
+
+  /* Custom Animations */
+  --animate-fade-in: fade-in 1s ease-out;
+  --animate-slide-up: slide-up 0.8s ease-out;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes fade-in { from { opacity: 1; } to { opacity: 1; } }
+  @keyframes slide-up { from { transform: translateY(30px); } to { transform: translateY(0); } }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+}
+
+@layer base {
+  :root {
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: dark;
+    color: var(--color-brand-white);
+    background-color: var(--color-neon-purple);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .mobile-menu-neon {
+    background: #A020F0;
+    border-left: 2px solid #FFFFFF;
+  }
+}
