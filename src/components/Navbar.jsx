@@ -17,8 +17,11 @@ const Navbar = () => {
     } else {
       const element = document.getElementById(id);
       if (element) {
+        // Calculate the absolute position on the page
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        
         window.scrollTo({
-          top: element.offsetTop,
+          top: elementPosition,
           behavior: 'smooth'
         });
       }
