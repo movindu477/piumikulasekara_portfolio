@@ -29,7 +29,7 @@ const Hero = () => {
               PIUMI <span className="text-white">KULASEKARA</span>
             </h1>
             <div className="animate-fade-in flex flex-col items-start space-y-6 max-w-2xl pl-2">
-               <h4 className="text-2xl font-bold text-white tracking-tight leading-relaxed drop-shadow-lg">
+               <h4 className="text-2xl font-light text-white tracking-tight leading-relaxed drop-shadow-lg">
                  Operations, Partnerships & People Systems <span className="text-white italic">for Growing Organizations</span>
                </h4>
                <div className="flex items-center gap-4">
@@ -80,7 +80,7 @@ const Hero = () => {
                <p className="text-[10px] font-bold uppercase tracking-[0.5em] text-white">
                  Independent consultant
                </p>
-               <h4 className="text-[14px] font-medium text-white tracking-wide leading-relaxed italic opacity-90 mx-auto before:content-['“'] after:content-['”'] max-w-sm">
+               <h4 className="text-[14px] font-light text-white tracking-wide leading-relaxed italic opacity-90 mx-auto before:content-['“'] after:content-['”'] max-w-sm">
                  Operations, Partnerships & People Systems for Growing Organizations
                </h4>
             </div>

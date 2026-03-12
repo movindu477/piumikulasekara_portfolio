@@ -6,10 +6,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative w-full min-h-screen bg-black text-white py-24 md:py-32 overflow-hidden px-6 md:px-12 lg:px-24"
+      className="relative w-full min-h-screen bg-transparent text-white py-24 md:py-32 overflow-hidden px-6 md:px-12 lg:px-24"
     >
       {/* Background Decor */}
       <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#06000c] to-black opacity-80"></div>
         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[70vw] h-[70vw] bg-neon-purple-deep/10 blur-[150px] rounded-full"></div>
       </div>
 
@@ -25,7 +26,7 @@ const About = () => {
               <img src={meImage} alt="Piumi Kulasekara" className="w-[85%] h-auto object-contain translate-y-4 scale-110 relative z-10 filter contrast-110" />
             </div>
 
-            <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-2">Piumi Kulasekara</h3>
+            <h3 className="text-2xl md:text-3xl font-light tracking-tight text-white mb-2">Piumi Kulasekara</h3>
             <p className="text-brand-purple text-sm font-medium tracking-wide uppercase mb-auto">piumikulasekara6@gmail.com</p>
 
             <a 
@@ -60,7 +61,7 @@ const About = () => {
               </div>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">About Me</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6">About Me</h2>
 
             {/* Open to Work Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#4ADE80]/30 bg-[#4ADE80]/10 text-[#4ADE80] text-[11px] font-bold uppercase tracking-widest mb-10 shadow-[0_0_15px_rgba(74,222,128,0.15)]">

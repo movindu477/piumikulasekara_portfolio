@@ -7,6 +7,7 @@ const Navbar = () => {
     { name: 'Home', id: 'home' },
     { name: 'About Me', id: 'about' },
     { name: 'Work', id: 'work' },
+    { name: 'Reviews', id: 'testimonials' },
     { name: 'Contact', id: 'contact' }
   ];
 
@@ -40,12 +41,17 @@ const Navbar = () => {
         return;
       }
 
+      const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
+
       // simple logic to find current section based on scroll
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navLinks[i].id);
-          break;
+        if (section) {
+          const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+          if (sectionTop <= scrollPosition || (isAtBottom && i === sections.length - 1)) {
+            setActiveSection(navLinks[i].id);
+            break;
+          }
         }
       }
     };
@@ -142,12 +148,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="mt-auto mb-8">
-            <button className="group w-full py-4 rounded-full bg-transparent border border-white/20 text-white font-bold uppercase text-[11px] tracking-[0.2em] transition-all hover:bg-brand-purple hover:border-brand-purple flex items-center justify-center gap-3 cursor-pointer">
-              Let's Connect
-              <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
-            </button>
-          </div>
+
         </div>
       </div>
     </>
